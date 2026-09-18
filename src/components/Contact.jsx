@@ -319,7 +319,7 @@ export default function Contact() {
     <section id="contact" className="relative scroll-mt-24 py-24 md:py-32">
       <div className="shell">
         <SectionHeading
-          index="04"
+          index="05"
           eyebrow="Contact"
           title="Let's talk about what you're building."
           description="I'm open to full-stack and AI engineering roles, internships and freelance builds. The fastest way to reach me is email — everything else works too."

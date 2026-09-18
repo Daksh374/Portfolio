@@ -23,6 +23,7 @@ export const navLinks = [
   { label: 'About', href: '#about', id: 'about' },
   { label: 'Work', href: '#work', id: 'work' },
   { label: 'Stack', href: '#stack', id: 'stack' },
+  { label: 'Education', href: '#education', id: 'education' },
   { label: 'Contact', href: '#contact', id: 'contact' },
 ];
 
@@ -65,6 +66,16 @@ export const stack = [
     items: ['Groq (LLaMA 3)', 'LangGraph', 'LangChain', 'Sentence-Transformers', 'RAG pipelines', 'Python'],
   },
 ];
+
+export const education = {
+  degree: 'B.Tech — Computer Science & Engineering',
+  specialisation: 'Data Science',
+  shortDegree: 'B.Tech · CSE (Data Science)',
+  institution: 'Bhagwan Parshuram Institute of Technology',
+  location: 'Rohini, Delhi',
+  cgpa: '9',
+  cgpaScale: '10',
+};
 
 export const metrics = [
   { value: '4+', label: 'Full-stack products shipped' },
