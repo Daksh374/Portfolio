@@ -1,12 +1,10 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowUp, Mail, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons';
-import { site, navLinks } from '../data/site';
-import { scrollToTarget, scrollToTop } from '../lib/scroll';
+import { site } from '../data/site';
 import { PrimaryButton, ResumeButton } from './ui';
 import { FadeIn, RevealText } from './AnimatedText';
-import { Magnetic } from './Magnetic';
 
 export default function Footer() {
   const ref = useRef(null);
@@ -86,105 +84,6 @@ export default function Footer() {
           </FadeIn>
         </div>
       </section>
-
-      {/* ---------------------------------------------- oversized wordmark */}
-      <div className="relative border-t border-line">
-        <div className="shell pt-14">
-          <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <div className="font-display text-[clamp(3rem,13vw,11rem)] font-bold leading-[0.82] tracking-ultra-tight text-graphite/[0.07]">
-                DAKSH
-                <br />
-                YADAV
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-8 sm:flex-row sm:gap-14 lg:pb-4">
-              <div>
-                <div className="eyebrow mb-4">Navigate</div>
-                <ul className="space-y-2.5">
-                  {navLinks.map((link) => (
-                    <li key={link.id}>
-                      <button
-                        type="button"
-                        onClick={() => scrollToTarget(link.href, { offset: -10 })}
-                        className="group inline-flex items-center gap-2 text-[13.5px] text-graphite/60 transition-colors hover:text-graphite"
-                      >
-                        <span className="h-px w-0 bg-accent transition-all duration-400 group-hover:w-4" />
-                        {link.label}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <div className="eyebrow mb-4">Elsewhere</div>
-                <ul className="space-y-2.5">
-                  <li>
-                    <a
-                      href={site.github}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="text-[13.5px] text-graphite/60 transition-colors hover:text-graphite"
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={site.linkedin}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="text-[13.5px] text-graphite/60 transition-colors hover:text-graphite"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={site.resume}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="text-[13.5px] text-graphite/60 transition-colors hover:text-graphite"
-                    >
-                      Resume
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={`mailto:${site.email}`}
-                      className="text-[13.5px] text-graphite/60 transition-colors hover:text-graphite"
-                    >
-                      Email
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* bottom bar */}
-          <div className="mt-14 flex flex-col items-start justify-between gap-5 border-t border-line py-7 sm:flex-row sm:items-center">
-            <p className="font-mono text-[11px] text-graphite/60">
-              © {new Date().getFullYear()} {site.name} · {site.location}
-            </p>
-
-            <div className="flex items-center gap-5">
-              <Magnetic strength={0.3}>
-                <button
-                  type="button"
-                  onClick={() => scrollToTop()}
-                  aria-label="Back to top"
-                  className="group grid h-10 w-10 place-items-center rounded-full border border-line bg-cream transition-colors duration-400 hover:border-accent/50"
-                >
-                  <ArrowUp className="h-4 w-4 text-graphite/70 transition-all duration-400 group-hover:-translate-y-0.5 group-hover:text-accent-deep" />
-                </button>
-              </Magnetic>
-            </div>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 }
