@@ -55,16 +55,16 @@ export const stack = [
   },
   {
     group: 'Backend',
-    items: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT', 'Multer', 'Cloudinary', 'Razorpay'],
+    items: ['Node.js', 'Express', 'FastAPI', 'REST APIs', 'JWT', 'Multer', 'Cloudinary'],
   },
   {
     group: 'Data',
-    items: ['MongoDB', 'Mongoose', 'SQLite', 'SQLAlchemy', 'ChromaDB', 'Pandas'],
+    items: ['MongoDB', 'Mongoose', 'SQLite', 'ChromaDB', 'Pandas'],
   },
   {
     group: 'AI / ML',
     items: ['Groq (LLaMA 3)', 'LangGraph', 'LangChain', 'Sentence-Transformers', 'RAG pipelines', 'Python'],
-  },
+  }
 ];
 
 export const education = {
